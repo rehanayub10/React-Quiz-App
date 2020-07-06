@@ -14,6 +14,34 @@
     left: 14px;
   }
 
-p {
+.question-text {
     text-align: center;
+    margin: 20px 10px;
+    font-size: 15px;
+}
+
+.option-list {
+    width: 100%;
+}
+
+.option-list button {
+    color: #fff !important;
+    background: #60a3bc;
+    text-decoration: none;
+    margin: 8px auto;
+    text-align: center;
+    padding: 8px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 90%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    transition: all 0.4s ease 0s;
+    border-radius: 50px;
+    border: none;
+}
+
+.option-list :hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
 }

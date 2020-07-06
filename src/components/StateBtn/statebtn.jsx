@@ -1,8 +1,10 @@
 import React from 'react';
 
-const StateBtn = () => {
+import './statebtn.css';
+
+const StateBtn = ({text, startFn}) => {
     return (
-        <button> Start Quiz! </button>
+        <button onClick = {startFn()} className="statebtn"> {text} </button>
     )
 }
 

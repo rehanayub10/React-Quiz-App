@@ -8,7 +8,7 @@ const App = () => {
 
   const questions = [
     {
-      question: "What is 2 + 2?",
+      question: "Practice Question : What is 2 + 2?",
       options : [
         { text : "2", isCorrect : false},
         { text : "4", isCorrect : true},
@@ -35,8 +35,8 @@ const App = () => {
       <img src="https://images.ctfassets.net/szuukvy7owq5/3FSAHVjls9nJFywFMqHq6z/420f3df9f3939164b0a2389bf7298bb2/iphone_8_front_spgry.png?fm=webp" alt="IPhone UI" />
       </div>
      
-      <QCard />
-      <StateBtn />
+      <QCard data={displayQuestion}/>
+      <StateBtn startFn={() => console.log('Somehthing')} text="Start Quiz!"/>
     </div>
   )
 }

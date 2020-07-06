@@ -2,9 +2,9 @@ import React from 'react';
 
 import './statebtn.css';
 
-const StateBtn = ({text, startFn}) => {
+const StateBtn = ({text, fn}) => {
     return (
-        <button onClick = {startFn()} className="statebtn"> {text} </button>
+        <button onClick = {fn} className="statebtn"> {text} </button>
     )
 }
 

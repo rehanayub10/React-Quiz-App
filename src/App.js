@@ -6,6 +6,7 @@ import StateBtn from './components/StateBtn/statebtn';
 
 const App = () => {
 
+  let index = 0;
   const questions = [
     {
       question: "Practice Question : What is 2 + 2?",
@@ -29,6 +30,12 @@ const App = () => {
 
   const [displayQuestion, setDisplayQuestion] = useState(questions[0]);
 
+  const appendQuestion = index => {
+    index++;
+    console.log(index);
+    setDisplayQuestion(questions[index]);
+  }
+
   return (
     <div>
       <div className="phone">
@@ -36,7 +43,7 @@ const App = () => {
       </div>
      
       <QCard data={displayQuestion}/>
-      <StateBtn startFn={() => console.log('Somehthing')} text="Start Quiz!"/>
+      <StateBtn fn={() => appendQuestion(index)} text="Start Quiz!"/>
     </div>
   )
 }

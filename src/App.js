@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
+import './App.css';
+import QCard from './components/QCard/QCard';
+import StateBtn from './components/StateBtn/statebtn';
+
+const App = () => {
+
+  const questions = [
+    {
+      question: "What is 2 + 2?",
+      options : [
+        { text : "2", isCorrect : false},
+        { text : "4", isCorrect : true},
+        { text : "22", isCorrect : false},
+        { text : "0", isCorrect : false},
+      ] 
+    } , 
+    {
+      question: "Mercury is the closest planet to the sun in our solar system. What is its average nightime temperature (in degrees Celsius)?",
+      options : [
+        { text : "350", isCorrect : false},
+        { text : "1000", isCorrect : false},
+        { text : "-170", isCorrect : true},
+        { text : "0", isCorrect : false},
+      ] 
+    }
+  ];
+
+  const [displayQuestion, setDisplayQuestion] = useState(questions[0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="phone">
+      <img src="https://images.ctfassets.net/szuukvy7owq5/3FSAHVjls9nJFywFMqHq6z/420f3df9f3939164b0a2389bf7298bb2/iphone_8_front_spgry.png?fm=webp" alt="IPhone UI" />
+      </div>
+     
+      <QCard />
+      <StateBtn />
     </div>
-  );
+  )
 }
 
 export default App;

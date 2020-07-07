@@ -32,7 +32,6 @@ const App = () => {
 
   const appendQuestion = index => {
     index++;
-    console.log(index);
     setDisplayQuestion(questions[index]);
   }
 
@@ -41,9 +40,8 @@ const App = () => {
       <div className="phone">
       <img src="https://images.ctfassets.net/szuukvy7owq5/3FSAHVjls9nJFywFMqHq6z/420f3df9f3939164b0a2389bf7298bb2/iphone_8_front_spgry.png?fm=webp" alt="IPhone UI" />
       </div>
-     
       <QCard data={displayQuestion}/>
-      <StateBtn fn={() => appendQuestion(index)} text="Start Quiz!"/>
+      <StateBtn fn={() => appendQuestion(index)} text="Next Question"/>
     </div>
   )
 }
